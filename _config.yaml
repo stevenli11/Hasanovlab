@@ -1,5 +1,5 @@
 # site properties and page defaults
-title: Hasanov Lab
+title: Code to Clinic
 subtitle: 
 description: 
 header: images/background.jpg
@@ -12,12 +12,12 @@ url: "https://hasanov-lab.github.io"
 
 # site social media and other links
 links:
-  email: contact@stevenli11.com
-  orcid: 0000-0001-8713-9213
+  email: 
+  orcid: 
   google-scholar: ETJoidYAAAAJ
   github: hasanov-lab
-  twitter: stevenli11
-  youtube: stevenli11
+  twitter: 
+  youtube: 
 
 ### jekyll settings
 
