@@ -1,17 +1,21 @@
 # site properties and page defaults
-title: stevenli11
+title: Hasanov Lab
 subtitle: 
-description: An engaging 1-3 sentence description of your lab.
+description: 
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
+
+# site url settings
+baseurl: ""
+url: "https://hasanov-lab.github.io"
 
 # site social media and other links
 links:
   email: contact@stevenli11.com
   orcid: 0000-0001-8713-9213
   google-scholar: ETJoidYAAAAJ
-  github: stevenli11
+  github: hasanov-lab
   twitter: stevenli11
   youtube: stevenli11
 
