@@ -7,8 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Our lab publishes on genitourinary malignancies, renal cell carcinoma, brain metastasis, tumor immunology, immunotherapy, and computational biology. Below is a selection of our work — see [Google Scholar](https://scholar.google.com/citations?user=R6wSHlgAAAAJ) for a complete list.
 
 {% include section.html %}
 
