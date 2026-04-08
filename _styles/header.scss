@@ -117,6 +117,17 @@ nav > a:hover {
   background: var(--overlay);
 }
 
+nav > a.nav-active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  border-radius: 0;
+}
+
+header.background nav > a.nav-active {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
 header:not([data-big]) {
   @media (max-width: $collapse) {
     justify-content: flex-end;
