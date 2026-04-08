@@ -7,8 +7,6 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
-We welcome inquiries from potential collaborators, prospective students and postdocs, and anyone interested in our research.
-
 {% include section.html %}
 
 <div class="contact-container">
@@ -23,8 +21,6 @@ We welcome inquiries from potential collaborators, prospective students and post
         <h4>Address</h4>
         <p>
           Pelotonia Research Center<br>
-          Department of Internal Medicine<br>
-          Division of Medical Oncology<br>
           The Ohio State University<br>
           2255 Kenny Rd<br>
           Columbus, OH 43210
@@ -64,10 +60,6 @@ We welcome inquiries from potential collaborators, prospective students and post
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.0!2d-83.0305!3d40.0030!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388c5e1a6c8b1d%3A0x5af8e1e6e07f9a8e!2sPelotonia%20Research%20Center!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0; min-height:500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
-
-{% include section.html background="images/background.jpg" dark=true %}
-
-**Interested in joining our team?** We are always looking for motivated students, postdocs, and collaborators passionate about cancer research and computational biology. Please send your CV and a brief description of your research interests to [elshad.hasanov@osumc.edu](mailto:elshad.hasanov@osumc.edu).
 
 <style>
 .contact-container {
