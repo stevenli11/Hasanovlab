@@ -2,7 +2,7 @@
 name: Semiha Ozgul
 image: images/photo.jpg
 role: postdoc
-description: Postdoctoral Scholar
+description: Postdoctoral Scholar, Statistics
 affiliation: The Ohio State University
 ---
 

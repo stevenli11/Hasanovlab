@@ -2,7 +2,7 @@
 name: Peng Li
 image: images/photo.jpg
 role: phd
-description: PhD Student
+description: PhD Student, Computer Science
 affiliation: The Ohio State University
 ---
 

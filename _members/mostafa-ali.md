@@ -2,7 +2,7 @@
 name: Mostafa I.H. Ali
 image: images/photo.jpg
 role: phd
-description: PhD Student
+description: PhD Student, Bioinformatics & Computational Biology
 affiliation: The Ohio State University
 ---
 

@@ -2,7 +2,7 @@
 name: Zuhair Majeed
 image: images/photo.jpg
 role: postdoc
-description: Postdoctoral Scholar
+description: Postdoctoral Scholar, Clinician
 affiliation: The Ohio State University
 ---
 
