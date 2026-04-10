@@ -21,14 +21,14 @@ Stay updated with the latest news, publications, and events from the Hasanov Lab
 
   <div class="news-twitter">
     <h3 class="news-twitter-heading">
-      <i class="fa-brands fa-x-twitter"></i> Latest from @HasanovLab
+      <i class="fa-brands fa-x-twitter"></i> Latest Tweets
     </h3>
     <div class="news-twitter-embed">
       <a class="twitter-timeline"
-         data-height="700"
-         data-chrome="noheader nofooter noborders transparent"
+         data-height="720"
+         data-theme="light"
          href="https://twitter.com/HasanovLab?ref_src=twsrc%5Etfw">
-        Tweets by HasanovLab
+        Loading tweets from @HasanovLab…
       </a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
