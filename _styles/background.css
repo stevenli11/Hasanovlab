@@ -42,24 +42,51 @@ header.background[data-big]:after {
   z-index: -1;
 }
 
+.hero-image {
+  display: none;
+}
+
 @media (max-width: 768px) {
   header.background[data-big] {
     aspect-ratio: unset !important;
     height: auto !important;
-    padding-top: calc(56.2637362637vw + 20px) !important;
-    padding-bottom: 30px !important;
+    min-height: unset !important;
+    padding: 0 0 25px 0 !important;
     justify-content: flex-start !important;
+    gap: 15px !important;
   }
   header.background[data-big]:before {
-    background-size: 100% auto !important;
-    background-position: top center !important;
-    bottom: auto !important;
-    height: 56.2637362637vw !important;
+    display: none !important;
   }
   header.background[data-big]:after {
-    bottom: auto !important;
-    height: 56.2637362637vw !important;
-    background: rgba(0, 0, 0, 0.4) !important;
+    display: none !important;
+  }
+  header.background[data-big] .hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+    margin: 0;
+    flex-shrink: 0;
+  }
+  header.background[data-big] .home {
+    padding: 0 15px;
+  }
+  header.background[data-big] .title {
+    font-size: var(--xl) !important;
+  }
+  header.background[data-big] .subtitle {
+    font-size: var(--normal) !important;
+  }
+  header.background[data-big] nav {
+    width: 100%;
+    padding: 0 10px;
+    gap: 4px 8px !important;
+    justify-content: center;
+    font-size: 0.78em;
+  }
+  header.background[data-big] nav > a {
+    padding: 4px 6px;
   }
 }
 header.background:not([data-big]) {
