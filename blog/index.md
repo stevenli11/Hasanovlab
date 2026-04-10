@@ -27,12 +27,31 @@ Stay updated with the latest news, publications, and events from the Hasanov Lab
       <a class="twitter-timeline"
          data-height="720"
          data-theme="light"
+         data-chrome="noheader nofooter"
          href="https://twitter.com/HasanovLab?ref_src=twsrc%5Etfw">
         Loading tweets from @HasanovLab…
       </a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
+
+<script>
+  // Make sure Twitter widgets.js scans for the timeline element after the
+  // DOM is ready, in case the script loaded before the element existed.
+  (function () {
+    function loadTwitter() {
+      if (window.twttr && window.twttr.widgets) {
+        window.twttr.widgets.load(document.querySelector('.news-twitter-embed'));
+      } else {
+        setTimeout(loadTwitter, 300);
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadTwitter);
+    } else {
+      loadTwitter();
+    }
+  })();
+</script>
 </div>
 
 <style>
