@@ -20,11 +20,16 @@
 header.background[data-big] {
   background: #000000 !important;
   color: #ffffff;
+  aspect-ratio: 2730/1536;
+  min-height: unset;
+  height: auto;
+  justify-content: flex-end !important;
+  padding-bottom: 60px !important;
 }
 
 header.background[data-big]:before {
   opacity: 1 !important;
-  background-size: contain !important;
+  background-size: cover !important;
   background-position: 50% 50%;
   transform: scaleX(-1);
 }
