@@ -48,27 +48,65 @@ header.background[data-big]:after {
   z-index: -1;
 }
 
-// === Mobile: drop aspect-ratio so content fits, image sits on top ===
+// Hero image element (only used on mobile, hidden on desktop)
+.hero-image {
+  display: none;
+}
+
+// === Mobile: real <img> at top, nav compact, content below ===
 @media (max-width: 768px) {
   header.background[data-big] {
     aspect-ratio: unset !important;
     height: auto !important;
-    padding-top: calc(100vw * 1536 / 2730 + 20px) !important;
-    padding-bottom: 30px !important;
+    min-height: unset !important;
+    padding: 0 0 25px 0 !important;
     justify-content: flex-start !important;
+    gap: 15px !important;
   }
 
+  // Hide the background-image layer on mobile, the real <img> takes over
   header.background[data-big]:before {
-    background-size: 100% auto !important;
-    background-position: top center !important;
-    bottom: auto !important;
-    height: calc(100vw * 1536 / 2730) !important;
+    display: none !important;
   }
 
   header.background[data-big]:after {
-    bottom: auto !important;
-    height: calc(100vw * 1536 / 2730) !important;
-    background: rgba(0, 0, 0, 0.4) !important;
+    display: none !important;
+  }
+
+  // Show the real <img> at the top of the header in the document flow
+  header.background[data-big] .hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  // Compact title/logo on mobile
+  header.background[data-big] .home {
+    padding: 0 15px;
+  }
+
+  header.background[data-big] .title {
+    font-size: var(--xl) !important;
+  }
+
+  header.background[data-big] .subtitle {
+    font-size: var(--normal) !important;
+  }
+
+  // Compact nav: smaller font, tighter gaps, wraps cleanly
+  header.background[data-big] nav {
+    width: 100%;
+    padding: 0 10px;
+    gap: 4px 8px !important;
+    justify-content: center;
+    font-size: 0.78em;
+  }
+
+  header.background[data-big] nav > a {
+    padding: 4px 6px;
   }
 }
 
