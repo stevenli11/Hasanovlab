@@ -53,27 +53,108 @@ header.background[data-big]:after {
   display: none;
 }
 
-// === Mobile: real <img> at top, nav compact, content below ===
+// === Mobile: compact white top bar + hamburger menu + hero image below ===
 @media (max-width: 768px) {
+  // Turn the big homepage header into a regular compact bar on mobile
   header.background[data-big] {
     aspect-ratio: unset !important;
     height: auto !important;
     min-height: unset !important;
-    padding: 0 0 25px 0 !important;
+    padding: 0 !important;
+    background: var(--background) !important;
+    color: var(--text) !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
     justify-content: flex-start !important;
-    gap: 15px !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
   }
 
-  // Hide the background-image layer on mobile, the real <img> takes over
-  header.background[data-big]:before {
-    display: none !important;
-  }
-
+  // Hide background-image layer and dark overlay on mobile
+  header.background[data-big]:before,
   header.background[data-big]:after {
     display: none !important;
   }
 
-  // Show the real <img> at the top of the header in the document flow
+  // Top bar: logo+title on left, hamburger on right
+  header.background[data-big] .home {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 15px 20px !important;
+    gap: 10px !important;
+    width: 100%;
+    order: 1;
+  }
+
+  header.background[data-big] .logo {
+    height: 36px !important;
+  }
+
+  header.background[data-big] .title-text {
+    flex-direction: row !important;
+    align-items: baseline !important;
+    text-align: left !important;
+    flex-wrap: wrap;
+  }
+
+  header.background[data-big] .title {
+    font-size: var(--large) !important;
+    color: var(--text) !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  header.background[data-big] .subtitle {
+    display: none !important;
+  }
+
+  // Hamburger button: floating top-right
+  header.background[data-big] .nav-toggle {
+    display: flex !important;
+    position: absolute !important;
+    top: 18px;
+    right: 20px;
+    color: var(--text) !important;
+    z-index: 5;
+    order: 2;
+  }
+
+  header.background[data-big] .nav-toggle:after {
+    color: var(--text) !important;
+  }
+
+  // Hide nav by default, show when hamburger checked (vertical dropdown)
+  header.background[data-big] .nav-toggle:not(:checked) ~ nav {
+    display: none !important;
+  }
+
+  header.background[data-big] nav {
+    order: 3;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: var(--background);
+    border-top: 1px solid #eee;
+    gap: 0 !important;
+    text-transform: uppercase;
+  }
+
+  header.background[data-big] nav > a {
+    color: var(--text) !important;
+    padding: 14px 20px !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+
+  header.background[data-big] nav > a.nav-active {
+    color: var(--primary) !important;
+    border-bottom-color: var(--primary) !important;
+  }
+
+  // Hero image: full width below the top bar, no crop, flipped
   header.background[data-big] .hero-image {
     display: block;
     width: 100%;
@@ -81,32 +162,12 @@ header.background[data-big]:after {
     transform: scaleX(-1);
     margin: 0;
     flex-shrink: 0;
+    order: 4;
   }
 
-  // Compact title/logo on mobile
-  header.background[data-big] .home {
-    padding: 0 15px;
-  }
-
-  header.background[data-big] .title {
-    font-size: var(--xl) !important;
-  }
-
-  header.background[data-big] .subtitle {
-    font-size: var(--normal) !important;
-  }
-
-  // Compact nav: smaller font, tighter gaps, wraps cleanly
-  header.background[data-big] nav {
-    width: 100%;
-    padding: 0 10px;
-    gap: 4px 8px !important;
-    justify-content: center;
-    font-size: 0.78em;
-  }
-
-  header.background[data-big] nav > a {
-    padding: 4px 6px;
+  // Hide particles canvas on mobile (header is no longer dark)
+  header.background[data-big] #particles-js {
+    display: none !important;
   }
 }
 
